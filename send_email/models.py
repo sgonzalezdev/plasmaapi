@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# This model can be used for storaging the messages from your website into a DB.
 class Messages(models.Model):
         user_name = models.CharField(max_length=200, null=False)
         user_email= models.EmailField(max_length=254, default='webmail@sgonzalezdev.com')

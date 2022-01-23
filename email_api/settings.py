@@ -132,7 +132,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Default configuration for Gmail client. Thi will allow to use the embedded function send_email():
+# Default configuration for Gmail client. Thi will allow to use the embedded function send_mail():
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT ='587'
 EMAIL_HOST_USER='sgonzalezdev@gmail.com'
