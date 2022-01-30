@@ -1,6 +1,5 @@
 """
-App (send_email) Views
--Title:  Customized Views (Methods)
+-Title:  PlasmaAPI Customized Views (Methods)
 -Details: This contains all methods that will render a view in the app (send_email)
 -Version: 0.1.0
 -Autor: Sergio Enmanuel González
@@ -22,7 +21,7 @@ from django.utils.html import strip_tags
 # This function returns the main or index page. 
 def index(request):
     #response = json.dumps([{}])
-    return render(request,'index.html')
+    return render(request,'index.html',{'title':'PlasmaAPI'})
 
 @csrf_exempt
 #This function submits the JSON object received thru the REST-API

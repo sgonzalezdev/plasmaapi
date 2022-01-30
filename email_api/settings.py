@@ -1,7 +1,7 @@
 
 """ 
 Python using Django Web Framework
--Title: Email API 
+-Title: PlasmaAPI
 -Details: This will recieve an JSON Object from a serverside Express.js API, then will proceed sending an automatic email using Django Web Framework ( Primary Languague: Python)
 -Version: 0.1.0
 -Autor: Sergio Enmanuel González
@@ -129,7 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+ 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
