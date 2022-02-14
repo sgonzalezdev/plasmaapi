@@ -15,7 +15,9 @@ from . import views
 #Let's creates the customized urls within app(send_email).
 urlpatterns = [
     path('',views.index, name='index_page'),
+    path('reqs',views.reqs, name='requirements'),
     path('send',views.send_email),
     path('<str:email_from>',views.send_email),
+ 
 
 ]

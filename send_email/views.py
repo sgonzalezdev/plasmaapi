@@ -23,6 +23,10 @@ def index(request):
     #response = json.dumps([{}])
     return render(request,'index.html',{'title':'PlasmaAPI'})
 
+def reqs(request):
+    #response = json.dumps([{}])
+    return render(request,'reqs.html')
+
 @csrf_exempt
 #This function submits the JSON object received thru the REST-API
 def send_email(request, *args, **kwargs):
@@ -55,4 +59,8 @@ def send_email(request, *args, **kwargs):
             email.attach_alternative(html_content,'text/html')
             email.send()
         return HttpResponse(message,content_type='text/json')
+        
+
+
+ 
  

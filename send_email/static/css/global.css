@@ -7,9 +7,96 @@ Global CSS
  
  */
 
- 
-/*Header*/
+html,
+body {
+  background: #f8f9fa;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+}
+
+/*This makes footer sticky to the bottom*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
 
 /* top-nav-bar */
 
+.top-nav-bar {
+  background: #fca311;
+  height: 55px;
  
+  box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
+  color: #2e343b !important;
+  
+}
+
+.nav-item .nav-link {
+  color: #2e343b;
+}
+.fa-sun {
+  color: #fff;
+}
+
+/*Footer Elements*/
+.github {
+  color: #adb5bd !important ;
+}
+.linkendin {
+  color: #adb5bd !important ;
+}
+.youtube {
+  color: #adb5bd !important ;
+}
+.web-admin{
+  font-size: 10px;
+  color: #2e343b;
+
+  text-decoration: none;
+}
+.web-admin:hover{
+ 
+  color: #2e343b;
+}
+
+/* Home Page*/
+
+ .main-content{
+padding: 50px;
+ 
+ }
+
+ .main-content .list-group .list-group-item{
+   margin-bottom: 10px;
+   background: transparent;
+   border:0px;
+ }
+
+ 
+ .main-nav-left{
+  padding: 50px;
+ 
+ }
+ .main-nav-left .nav-item .nav-link:hover{
+  color:#fca311 !important;
+  transition: all 0.5s ease;
+}
+
+/*Serach bar*/
+
+.search-bar{
+
+  background:  #b2661a !important;
+  color: #fff !important ;
+  border:0px transparent !important;
+  border-radius: 10px;
+}

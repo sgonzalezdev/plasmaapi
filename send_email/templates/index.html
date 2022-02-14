@@ -4,14 +4,14 @@
  {%block top_nav_bar%}
  <nav class="navbar navbar-expand-lg top-nav-bar">
     <div class="container">
-      <a class="navbar-brand  " href="#">    <i class="far fa-sun   fa-2x"></i>    </a>
+      <a class="navbar-brand  " href="{%url 'index_page'%}">  <i class="far fa-sun  "></i>    </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link  " aria-current="page" href="#">PlasmaAPI</a>
           </li>
           
             </ul>
@@ -19,8 +19,8 @@
          
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control   search-bar" type="search" placeholder="Search" aria-label="Search">
+    
         </form>
         <div class="github">
           <div class="d-flex flex-column bd-highlight mb-3">
@@ -42,13 +42,13 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <ul class="nav flex-column">
+        <ul class="nav flex-column main-nav-left">
             
             <li class="nav-item">
-              <a class="nav-link" href="#">PlasmaAPI</a>
+              <a class="nav-link" href="{%url 'index_page'%}">PlasmaAPI</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Requirements</a>
+              <a class="nav-link" href="{%url 'requirements'%}">Requirements</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Installation</a>
@@ -64,11 +64,25 @@
             </li>
           </ul>
       </div>
-      <div class="col">
-        Column
+      <div class=" col-8 main-content">
+        {%block main_content%}
+
+       <h1 class="display-4"> Why do I need to use PlasmaAPI?</h1>
+        <br>
+<p>PlasmaAPI is a simple, fast and reliable web library API built-in with Python 3.10+ and based on Django 4.0 + </p>
+<br>
+<ul class="list-group">
+  <li class="list-group-item"><i class="fas fa-circle"></i> <strong>Fast:</strong> This library is using all the power of Django allowing high performance and tested 100% compatible with Axious and most of JavaScript Frameworks. </li>
+  
+    <li class="list-group-item"> <i class="fas fa-circle"></i><strong> Easy to code: </strong>  neat documentation that saves you time while integrating the source  </li>
+ 
+      <li class="list-group-item"><i class="fas fa-circle"></i> <strong>Short: </strong> Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability </li>
+ 
+</ul>
+{% endblock%}
       </div>
-      <div class="col">
-        Column
+      <div class=" col">
+       dddd
       </div>
     </div>
   </div>
@@ -80,21 +94,21 @@
 
 {%block footer %} 
 
-<div class="container-fluid  top-nav-bar"></div>
+<div class="container-fluid"></div>
 <nav class="navbar footer-nav-bar">
   <div class="container">
-    <a class="navbar-brand">Developed by Sergio Enmanuel Gonzalez</a>
+    <a class=" web-admin">Developed by Sergio Enmanuel Gonzalez</a>
     <div class="d-flex">
       <ul class="nav">
        
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fab fa-github"></i></a>
+          <a class="nav-link github" href="#"><i class="fab fa-github"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="nav-link linkendin" href="#"><i class="fab fa-linkedin-in"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="nav-link youtube" href="#"><i class="fab fa-youtube"></i></a>
         </li>
         
       </ul>
