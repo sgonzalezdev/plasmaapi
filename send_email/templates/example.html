@@ -1,0 +1,57 @@
+{% extends "index.html" %} {%block main_content%}
+
+<h1 class="display-4">Example</h1>
+<br />
+
+ 
+  <div class="d-flex flex-column bd-highlight mb-3 box-code">
+    <div class="p-2 bd-highlight"> <i class="fas fa-circle red-icon"></i> <i class="fas fa-circle yellow-icon"></i> <i class="fas fa-circle green-icon"></i></div>
+    <div class="p-2 code-box-size "> 
+
+
+ <pre>
+    <code>
+    @csrf_exempt
+    #This function submits the JSON object received thru the REST-API
+   <span class="first-color"> def </span>send_email( <span class="second-color">request</span>, *<span class="second-color">args</span>, **<span class="second-color">kwargs</span>):
+                  
+        message = {}
+            if request.method == '<span class="third-color">POST</span>':
+                # The message is received as a JSON from the REST-API, then, converted into an JSON object. 
+                message = json.loads(request.body)
+                <span class="third-color">print</span>(message)
+                #Let's split our object per fields.
+                user_name = message['user_name']
+                <span class="third-color">print</span>(user_name)
+                user_email=  message['<span class="third-color">user_email</span>']
+                user_reason =  message['<span class="third-color">user_reason</span>']
+                user_phone =  message['<span class="third-color">user_phone</span>']
+                user_message =  message['<span class="third-color">user_message</span>']
+                user_contact_via = message['<span class="third-color">user_contact_via</span>'] 
+                #Loading HTML Template
+                html_content = render_to_string('<span class="third-color">email_template.html</span>',{'<span class="third-color">title</span>':'test email','<span class="third-color">content</span>':user_message})
+                text_content = strip_tags(html_content)
+                <span class="third-color">print</span>(text_content)
+            #Note this is a Build-In django feature for sending emails: send_mail()
+                email = EmailMultiAlternatives(
+                    user_reason,
+                     text_content,
+                     user_email,
+                    ['<span class="third-color">sgonzalezdev@gmail.com</span>']
+                
+                    )
+                    email.attach_alternative(html_content,'<span class="third-color">text/html</span>')
+                    email.send()
+                return HttpResponse(message,content_type='<span class="third-color">text/json</span>')                
+    </code>
+     </pre>
+
+
+    </div>
+    
+  </div>
+   
+ 
+    {%endblock%}
+  </ul>
+</ul>

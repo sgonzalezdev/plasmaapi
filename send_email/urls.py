@@ -16,6 +16,9 @@ from . import views
 urlpatterns = [
     path('',views.index, name='index_page'),
     path('reqs',views.reqs, name='requirements'),
+    path('install',views.installation, name='installation'),
+    path('release_notes',views.release_notes, name='release_notes'),
+    path('example',views.example, name='example'),
     path('send',views.send_email),
     path('<str:email_from>',views.send_email),
  

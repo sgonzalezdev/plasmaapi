@@ -20,12 +20,25 @@ from django.utils.html import strip_tags
 
 # This function returns the main or index page. 
 def index(request):
-    #response = json.dumps([{}])
+    
     return render(request,'index.html',{'title':'PlasmaAPI'})
 
 def reqs(request):
-    #response = json.dumps([{}])
+    
     return render(request,'reqs.html')
+
+def installation(request):
+     
+    return render(request,'installation.html')
+
+def release_notes(request):
+   
+    return render(request,'release_notes.html')
+def example(request):
+   
+    return render(request,'example.html')
+
+
 
 @csrf_exempt
 #This function submits the JSON object received thru the REST-API

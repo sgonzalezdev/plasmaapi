@@ -32,12 +32,11 @@ body {
 .top-nav-bar {
   background: #fca311;
   height: 55px;
- 
+
   box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
   color: #2e343b !important;
-  
 }
 
 .nav-item .nav-link {
@@ -57,46 +56,77 @@ body {
 .youtube {
   color: #adb5bd !important ;
 }
-.web-admin{
+.web-admin {
   font-size: 10px;
   color: #2e343b;
 
   text-decoration: none;
 }
-.web-admin:hover{
- 
+.web-admin:hover {
   color: #2e343b;
 }
 
 /* Home Page*/
 
- .main-content{
-padding: 50px;
- 
- }
-
- .main-content .list-group .list-group-item{
-   margin-bottom: 10px;
-   background: transparent;
-   border:0px;
- }
-
- 
- .main-nav-left{
+.main-content {
   padding: 50px;
- 
- }
- .main-nav-left .nav-item .nav-link:hover{
-  color:#fca311 !important;
+}
+
+.main-content .list-group .list-group-item {
+  margin-bottom: 10px;
+  background: transparent;
+  border: 0px;
+}
+
+.main-nav-left {
+  padding: 50px;
+}
+.main-nav-left .nav-item .nav-link:hover {
+  color: #fca311 !important;
   transition: all 0.5s ease;
 }
 
 /*Serach bar*/
 
-.search-bar{
-
-  background:  #b2661a !important;
+.search-bar {
+  background: #b2661a !important;
   color: #fff !important ;
-  border:0px transparent !important;
+  border: 0px transparent !important;
   border-radius: 10px;
+}
+
+/*This will give style to the box-code example*/
+.box-code {
+  background: #1c1c24;
+  color: #adb5bd;
+  border: 0px transparent !important;
+  border-radius: 5px;
+}
+
+.red-icon {
+  color: #d9515d;
+}
+.yellow-icon {
+  color: #f4c025;
+}
+.green-icon {
+  color: #3ec930;
+}
+
+.code-box-size {
+  font-size: 15px;
+}
+.p-2 {
+  padding: 0px !important;
+}
+/*code snippers*/
+
+.first-color {
+  color:  #4d497e;
+}
+.second-color {
+  color: #7f6195;
+}
+.third-color {
+  color: #638689;
 }
