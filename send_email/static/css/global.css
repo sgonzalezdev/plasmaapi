@@ -9,33 +9,30 @@ Global CSS
 
 html,
 body {
-  background: #f8f9fa;
+  background: #F7F7F8 !important;
   padding: 0;
   height: 100%;
   margin: 0;
+  font-family:'Raleway-Black'!important;
 }
 
 /*This makes footer sticky to the bottom*/
 body {
   display: flex;
   flex-direction: column;
+ 
 }
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
-}
+ 
 
 /* top-nav-bar */
 
 .top-nav-bar {
-  background: #fca311;
-  height: 55px;
-
-  box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 1px 19px -9px rgba(0, 0, 0, 0.75);
+  background: #FFFFFF;
+  height: 80px;
+  
+  box-shadow: -2px 0px 10px -1px rgba(186,184,184,0.79);
+  -webkit-box-shadow: -2px 0px 10px -1px rgba(186,184,184,0.79);
+  -moz-box-shadow: -2px 0px 10px -1px rgba(186,184,184,0.79);
   color: #2e343b !important;
 }
 
@@ -43,29 +40,153 @@ body {
   color: #2e343b;
 }
 .fa-sun {
-  color: #fff;
+  
+}
+.navbar-nav{
+  margin: 0px !important;
+  padding: 0px !important;
+ 
+}
+.navbar-brand {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+/*Logo*/
+
+.plasma-logo-mini{
+ 
+  background:transparent;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+
+}
+.plasma-logo{
+ 
+  background:transparent;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+
+}
+.project-name{
+  padding-top: 35px;
+  padding-left: 1px;
+}
+/*Github info*/
+
+.github-info{
+font-size: 15px;
+  font-family:'Raleway-Light';
+  margin: 5px;
+}
+.github-link{
+   color: #2e343b;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+.github-link a:link {
+  color: #2e343b;
+  text-decoration: none;
+  cursor: pointer !important;
 }
 
+.github-link a:visited {
+  color: #2e343b;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+.github-link:hover {
+  color: #FF493C !important;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+.github-link a:active {
+  color: #2e343b;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+.p-2 {
+  margin: 0px!important;
+  padding: 0px !important;
+   
+}
+ p{
+  font-family:'Raleway-Medium';
+ }
 /*Footer Elements*/
-.github {
-  color: #adb5bd !important ;
+.content {
+  flex: 1 0 auto;
 }
-.linkendin {
-  color: #adb5bd !important ;
+.footer {
+  flex-shrink: 0;
 }
-.youtube {
-  color: #adb5bd !important ;
+.nav-item .github:hover {
+ 
+  color: #040D21;
+  transition: all 0.5s ease;
+}
+ 
+.nav-item .inkendin:hover {
+ 
+  color: #0077B5;
+  transition: all 0.5s ease;
+}
+.nav-item .youtube:hover {
+  color: #FF0000;
+  transition: all 0.5s ease;
+ 
 }
 .web-admin {
+ 
   font-size: 10px;
   color: #2e343b;
+  font-family:'Raleway-Medium';
 
   text-decoration: none;
 }
-.web-admin:hover {
+.web-admin-text {
+  margin-top: 10px;
+  font-size: 10px;
   color: #2e343b;
+  font-family:'Raleway-Medium';
+ 
+  text-decoration: none;
 }
-
+ 
+  
+  .web-admin  a:link {
+    color: #2e343b;
+    text-decoration: none;
+    cursor: pointer !important;
+  }
+  
+  .web-admin a:visited {
+    color: #2e343b;
+    text-decoration: none;
+    cursor: pointer !important;
+  }
+  
+  .web-admin:hover {
+    color: #FF493C !important;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    cursor: pointer !important;
+  }
+  
+  .web-admin a:active {
+    color: #2e343b;
+    text-decoration: none;
+    cursor: pointer !important;
+  }
+ 
 /* Home Page*/
 
 .main-content {
@@ -73,28 +194,26 @@ body {
 }
 
 .main-content .list-group .list-group-item {
-  margin-bottom: 10px;
-  background: transparent;
+  margin-bottom: 20px;
+  background:  transparent;
+  padding: 0px;
   border: 0px;
 }
 
 .main-nav-left {
   padding: 50px;
+  
 }
 .main-nav-left .nav-item .nav-link:hover {
-  color: #fca311 !important;
+  color: #FF493C !important;
+  
   transition: all 0.5s ease;
 }
-
-/*Serach bar*/
-
-.search-bar {
-  background: #b2661a !important;
-  color: #fff !important ;
-  border: 0px transparent !important;
-  border-radius: 10px;
+.main-nav-left .nav-item {
+ 
 }
 
+ 
 /*This will give style to the box-code example*/
 .box-code {
   background: #1c1c24;
@@ -114,11 +233,11 @@ body {
 }
 
 .code-box-size {
-  font-size: 15px;
+  font-size: 12px;
 }
-.p-2 {
-  padding: 0px !important;
-}
+ 
+ 
+ 
 /*code snippers*/
 
 .first-color {
@@ -129,4 +248,40 @@ body {
 }
 .third-color {
   color: #638689;
+}
+ 
+/*Fonts*/
+@font-face {
+  font-family:'Raleway-Bold';
+  src: url('../fonts/Raleway-Bold.ttf');
+}   
+
+
+@font-face {
+  font-family:'Raleway-Medium';
+  src: url('../fonts/Raleway-Medium.ttf');
+}   
+
+@font-face {
+  font-family:'Raleway-Black';
+  src: url('../fonts/Raleway-Black.ttf');
+}   
+
+@font-face {
+  font-family:'Raleway-SemiBold';
+  src: url('../fonts/Raleway-SemiBold.ttf');
+}   
+@font-face {
+  font-family:'Raleway-Light';
+  src: url('../fonts/Raleway-Light.ttf');
+}   
+ 
+/*footer */
+.footer-nav-bar{
+  height: 80px;
+  
+  box-shadow: -2px -2px 10px -1px rgba(186,184,184,0.79);
+-webkit-box-shadow: -2px -2px 10px -1px rgba(186,184,184,0.79);
+-moz-box-shadow: -2px -2px 10px -1px rgba(186,184,184,0.79);
+background: #FFFFFF !important;
 }

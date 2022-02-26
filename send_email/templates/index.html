@@ -1,31 +1,22 @@
 {% extends "base_template.html"  %} 
- 
+{% load static %}
 {% block title%} {{title}} {% endblock %} 
  {%block top_nav_bar%}
  <nav class="navbar navbar-expand-lg top-nav-bar">
     <div class="container">
-      <a class="navbar-brand  " href="{%url 'index_page'%}">  <i class="far fa-sun  "></i>    </a>
+      <a class="navbar-brand  " href="{%url 'index_page'%}">   <img  class="plasma-logo-mini" src="{% static 'images/PlasmaAPI_logo_mini.png'%}" alt="PlasmaAPI Logo">   </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link  " aria-current="page" href="#">PlasmaAPI</a>
-          </li>
-          
-            </ul>
-          </li>
-         
-        </ul>
-        <form class="d-flex">
-          <input class="form-control   search-bar" type="search" placeholder="Search" aria-label="Search">
-    
-        </form>
-        <div class="github">
-          <div class="d-flex flex-column bd-highlight mb-3">
-            <div class="p-2 bd-highlight"><i class="fab fa-github"></i> sgonzalezdev/plasmaapi</div>
-            <div class="p-2 bd-highlight"><i class="fas fa-sticky-note"></i> 0.1.0&nbsp;&nbsp; <i class="fab fa-python"></i> Django 4</div>
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+          <h1 class="project-name">PlasmaAPI</h1>
+        </div>
+        
+        <div class="github-info">
+          <div class="d-flex flex-column   ">
+            <div class="p-2   "> <a class="github-link" href="https://github.com/sgonzalezdev">  <i class="fab fa-github"></i> sgonzalezdev/plasmaapi </a></div>
+            <div class="p-2  "><i class="fas fa-sticky-note"></i> 0.1.0&nbsp;&nbsp; <i class="fab fa-python"></i> Django 4</div>
         
           </div>
 
@@ -64,23 +55,22 @@
       </div>
       <div class=" col-8 main-content">
         {%block main_content%}
-
-       <h1 class="display-4"> Why do I need to use PlasmaAPI?</h1>
-        <br>
-<p>PlasmaAPI is a simple, fast and reliable web library API built-in with Python 3.10+ and based on Django 4.0 + </p>
+ 
+        <img src="{% static 'images/PlasmaAPI_logo.png'%}" class="img-fluid plasma-logo" alt="PlasmaAPI Logo">
+<p><strong>PlasmaAPI is a simple, fast and reliable web library API built-in with Python 3.10+ and based on Django 4.0 + </strong></p>
 <br>
 <ul class="list-group">
-  <li class="list-group-item"><i class="fas fa-circle"></i> <strong>Fast:</strong> This library is using all the power of Django allowing high performance and tested 100% compatible with Axious and most of JavaScript Frameworks. </li>
+  <li class="list-group-item"><p><i class="fas fa-circle"></i> <strong>Fast:</strong>   This library is using all the power of Django allowing high performance and tested 100% compatible with Axious and most of JavaScript Frameworks </p> </li>
   
-    <li class="list-group-item"> <i class="fas fa-circle"></i><strong> Easy to code: </strong>  neat documentation that saves you time while integrating the source  </li>
+    <li class="list-group-item"> <p> <i class="fas fa-circle"></i><strong> Easy to code: </strong>   neat documentation that saves you time while integrating the source</p>  </li>
  
-      <li class="list-group-item"><i class="fas fa-circle"></i> <strong>Short: </strong> Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability </li>
+      <li class="list-group-item"><p><i class="fas fa-circle"></i> <strong>Short: </strong>   Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability</p> </li>
  
 </ul>
 {% endblock%}
       </div>
       <div class=" col">
-       dddd
+    
       </div>
     </div>
   </div>
@@ -95,18 +85,19 @@
 <div class="container-fluid"></div>
 <nav class="navbar footer-nav-bar">
   <div class="container">
-    <a class=" web-admin">Developed by Sergio Enmanuel Gonzalez</a>
+    
+    <p class=" web-admin-text" >Developed by <strong>  <a  class=" web-admin" href="https://www.linkedin.com/in/sergioenmanuelgonzalez/"> Sergio Enmanuel Gonzalez</a> </strong></p>
     <div class="d-flex">
       <ul class="nav">
        
         <li class="nav-item">
-          <a class="nav-link github" href="#"><i class="fab fa-github"></i></a>
+          <a class="nav-link github" href="https://github.com/sgonzalezdev"><i class="fab fa-github"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link linkendin" href="#"><i class="fab fa-linkedin-in"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link youtube" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="nav-link youtube" href="https://www.youtube.com/channel/UC7cue3gsz7EKN5TiW-riqZA"><i class="fab fa-youtube"></i></a>
         </li>
         
       </ul>
