@@ -6,6 +6,7 @@
 <meta charset="utf-8">
 <title>{% block title %} {% endblock %}</title> 
 <!-- CSS only -->
+{% block css_style %} {% endblock %}
  <link href=" {% static 'css/global.css' %}" rel="stylesheet"  >  
 <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
  
@@ -24,9 +25,11 @@
 
 </section>
 </div>
+
+<div class="btn-up"><i class="fas fa-arrow-up"></i></div>  
 <footer>
 
-    
+   
 {%block footer %} {% endblock %}
 
 </footer>

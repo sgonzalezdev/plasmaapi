@@ -38,7 +38,10 @@ def example(request):
    
     return render(request,'example.html')
 
+#Default email template look and feel.
+def show_email_template(request):
 
+  return render(request,'default_email_template.html')
 
 @csrf_exempt
 #This function submits the JSON object received thru the REST-API
@@ -48,22 +51,23 @@ def send_email(request, *args, **kwargs):
         if request.method == 'POST':
             # The message is received as a JSON from the REST-API, then, converted into an JSON object. 
             message = json.loads(request.body)
-            print(message)
             #Let's split our object per fields.
             user_name = message['user_name']
-            print(user_name)
             user_email=  message['user_email']
-            user_reason =  message['user_reason']
+            user_subject =  message['user_reason']
             user_phone =  message['user_phone']
             user_message =  message['user_message']
             user_contact_via = message['user_contact_via'] 
+            #Default incoming app_title
+            app_title="Website"
             #Loading HTML Template
-            html_content = render_to_string('email_template.html',{'title':'test email','content':user_message})
+            html_content = render_to_string('default_email_template.html',{'title':'PlasmaAPI default_email_template.','content':user_message,'app_title':app_title,'phone':user_phone,'contact_via':user_contact_via,'user_email':user_email})
             text_content = strip_tags(html_content)
-            print(text_content)
         #Note this is a Build-In django feature for sending emails: send_mail()
+
+        #The function will recieve , Subject, Messsage and From 
             email = EmailMultiAlternatives(
-                user_reason,
+                user_subject,
                 text_content,
                 user_email,
                 ['sgonzalezdev@gmail.com']
@@ -72,7 +76,8 @@ def send_email(request, *args, **kwargs):
             email.attach_alternative(html_content,'text/html')
             email.send()
         return HttpResponse(message,content_type='text/json')
-        
+
+ 
 
 
  

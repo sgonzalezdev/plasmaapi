@@ -19,8 +19,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+
+# Initialise environment variables
 from pathlib import Path
- 
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,9 +40,9 @@ SECRET_KEY = 'django-insecure-j1st)n004pnemybvddg%bz5q^dlpg$dafme72a%5r#-&jsdgk8
 DEBUG = True
 
 ALLOWED_HOSTS = []
- 
+
 # Application definition
- 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +54,7 @@ INSTALLED_APPS = [
     'corsheaders'
 ]
 CORS_ORIGIN_ALLOW_ALL = True
- 
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   
+
 ]
 
 ROOT_URLCONF = 'email_api.urls'
@@ -130,16 +135,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
- 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Default configuration for Gmail client. Thi will allow to use the embedded function send_mail():
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT ='587'
-EMAIL_HOST_USER='sgonzalezdev@gmail.com'
-EMAIL_HOST_PASSWORD ='rhnupsxzxyvfdtxs'
-EMAIL_USE_TLS= True
+# Default configuration for Email client. Thi will allow to use the embedded function send_mail():
+EMAIL_HOST = env('HOST')
+EMAIL_PORT = env('PORT')
+EMAIL_HOST_USER = env('HOST_USER')
+EMAIL_HOST_PASSWORD = env('HOST_PWD')
+EMAIL_USE_TLS = env('USE_TLS')

@@ -1,0 +1,44 @@
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <title>You have a new messsage from: {{app_title}}</title>
+ <style>
+ body{color:#212529!important;font-size:20px;font-family:Arial,Helvetica,sans-serif!important}.container{display:flex;align-items:stretch;align-content:stretch;margin:50px;border:1px #212529 solid;border-radius:5px}.container div{padding:50px}.col-1{flex:1}ul{padding:0;list-style-type:none}.list ul,li{padding:5px}.email-format{text-decoration:none!important;border:1px #212529 solid;padding:5px}a{text-decoration:none!important;color:#212529!important}
+     </style>
+ </head>
+ <body>
+ 
+     <div class="container">
+
+           
+          <div class="col-1">
+               <h4>Welcome to Default Email Template</h4>
+               <ul >
+                    <li>  <strong> Prefered method for contact:</strong> {{contact_via}}</li>
+                    <li>  <strong>  Phone Number: </strong>{{phone}}</li>
+                    <li>   <strong> Email: </strong> <span class="email-format">{{user_email}}</span> </li>
+                  </ul>
+              
+          <p>           
+              <strong>Message:</strong>  
+               <br>
+               {{content}}
+          
+                   
+                
+              
+              </p>
+          </div>
+                  
+     </div>
+
+ 
+
+ 
+ </body>
+ </html> 
+ 
+
+
+   
