@@ -1,7 +1,85 @@
 {% extends "index.html" %} {%block main_content%}
 
 <h1 class="display-4">Example</h1>
-<br />
+ 
+
+<p>Open the file .env and add your Email Client settings. Note that by default, the file is using Gmail Client. </p>
+<div class="d-flex flex-column bd-highlight mb-3 box-code">
+  <div class="p-2 bd-highlight"> <i class="fas fa-circle red-icon"></i> <i class="fas fa-circle yellow-icon"></i> <i class="fas fa-circle green-icon"></i></div>
+  <div class="p-2 code-box-size "> 
+
+
+<pre>
+  <code>
+  
+HOST='smtp.gmail.com'
+PORT='587'
+HOST_USER='youremail@gmail.com'
+HOST_PWD='xxxxxxxxxxxxxx'
+USE_TLS=True
+       
+  </code>
+   </pre>
+
+
+  </div>
+  
+</div>
+
+ 
+<p>
+  Dual RESTS API. This JavaScript REST API service is using Node.js (Express.js) calling another REST API built on Django (Python). Axios is used to submit our data( JSON Object ) from a contact form or app.  
+  </p>
+<div class="d-flex flex-column bd-highlight mb-3 box-code">
+  <div class="p-2 bd-highlight"> <i class="fas fa-circle red-icon"></i> <i class="fas fa-circle yellow-icon"></i> <i class="fas fa-circle green-icon"></i></div>
+  <div class="p-2 code-box-size "> 
+
+
+<pre>
+  <code>
+    <span class="first-color">const</span>bodyParser = <span class="second-color">require</span>("<span class="third-color">body-parser</span>");
+    <span class="first-color">const</span> express = <span class="second-color">require</span>("<span class="third-color">express</span>");
+    <span class="first-color">const</span> app = <span class="second-color">require</span>("<span class="third-color">express</span>")();
+    <span class="first-color">const</span>axios = <span class="second-color">require</span>("<span class="third-color">axios</span>");
+    <span class="code_comment">//This will storage our data from the contact form.</span>
+
+    <span class="first-color">app.use</span>(bodyParser.json());
+    <span class="first-color">app.all</span>("<span class="third-color">/getJSON</span>", (req, res) => {
+      res.json({ data: "data" });
+    });
+       
+    <span class="code_comment"> /*This below function will receive the data from a contact form, then, will push into a JSON file get request 
+    so it can be retrieved by Django Mailing App  */</span>
+    <span class="first-color"> app.post</span>("<span class="third-color">/submit-form-data</span>", (<span class="second-color">req</span>, <span class="second-color">res</span>> => {
+      const formData = req.body;
+    
+      <span class="code_comment">    //Submitting the data thru our REST-Api Django send_email app.</span>
+      <span class="first-color">axios</span>
+      <span class="second-color">.post</span>("<span class="third-color">http://localhost:8000/send_email</span>", <span class="third-color">formData</span>)
+      <span class="second-color">.then</span>(function (<span class="second-color">response</span>) {
+          console.log(response);
+         
+        })
+      <span class="second-color">.catch</span>(function (<span class="second-color">error</span>) {
+          console.log(<span class="second-color">error</span>);
+        });
+    
+        <span class="first-color">res.send</span>("<span class="third-color">The data has been submitted successfully.</span>");
+    });
+   
+    <span class="first-color">module.exports</span> = app;
+       
+  </code>
+   </pre>
+
+
+  </div>
+  
+</div>
+
+
+ <p>This is function is located into views.py, you freely to customize or refactor it. </p>
+
 
  
   <div class="d-flex flex-column bd-highlight mb-3 box-code">
@@ -12,32 +90,29 @@
  <pre>
     <code>
     @csrf_exempt
-    #This function submits the JSON object received thru the REST-API
+    <span class="code_comment">#This function submits the JSON object received thru the REST-API</span>
    <span class="first-color"> def </span>send_email( <span class="second-color">request</span>, *<span class="second-color">args</span>, **<span class="second-color">kwargs</span>):
-                  
-        message = {}
+   <span class="code_comment">  #Declare an empty object.</span>          
+        message = {}  
             if request.method == '<span class="third-color">POST</span>':
-                # The message is received as a JSON from the REST-API, then, converted into an JSON object. 
+            <span class="code_comment">    # The message is received as a JSON from the REST-API, then, converted into an JSON object.</span>  
                 message = json.loads(request.body)
-                <span class="third-color">print</span>(message)
-                #Let's split our object per fields.
+                <span class="code_comment">  #Let's split our object per fields.</span> 
                 user_name = message['user_name']
-                <span class="third-color">print</span>(user_name)
                 user_email=  message['<span class="third-color">user_email</span>']
-                user_reason =  message['<span class="third-color">user_reason</span>']
+                user_subject =  message['<span class="third-color">user_reason</span>']
                 user_phone =  message['<span class="third-color">user_phone</span>']
                 user_message =  message['<span class="third-color">user_message</span>']
-                user_contact_via = message['<span class="third-color">user_contact_via</span>'] 
-                #Loading HTML Template
+                user_contact_via = message['<span class="third-color">user_contact_via</span>']
+                <span class="code_comment"> #Note that you can pass to your template as many elements as you want thru render_to_string.</span> 
                 html_content = render_to_string('<span class="third-color">email_template.html</span>',{'<span class="third-color">title</span>':'test email','<span class="third-color">content</span>':user_message})
                 text_content = strip_tags(html_content)
-                <span class="third-color">print</span>(text_content)
-            #Note this is a Build-In django feature for sending emails: send_mail()
+                <span class="code_comment"> #Note this is a Build-In django feature for sending emails in Django.</span> 
                 email = EmailMultiAlternatives(
-                    user_reason,
+                    user_subject,
                      text_content,
                      user_email,
-                    ['<span class="third-color">sgonzalezdev@gmail.com</span>']
+                    ['<span class="third-color">youremail@gmail.com</span>']
                 
                     )
                     email.attach_alternative(html_content,'<span class="third-color">text/html</span>')

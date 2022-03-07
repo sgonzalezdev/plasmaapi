@@ -20,7 +20,7 @@ urlpatterns = [
     path('release_notes',views.release_notes, name='release_notes'),
     path('example',views.example, name='example'),
      path('email_template',views.show_email_template, name='email_template'),
-    path('send',views.send_email),
+    path('send_email',views.send_email),
     path('<str:email_from>',views.send_email),
  
 

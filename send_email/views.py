@@ -63,7 +63,7 @@ def send_email(request, *args, **kwargs):
             #Loading HTML Template
             html_content = render_to_string('default_email_template.html',{'title':'PlasmaAPI default_email_template.','content':user_message,'app_title':app_title,'phone':user_phone,'contact_via':user_contact_via,'user_email':user_email})
             text_content = strip_tags(html_content)
-        #Note this is a Build-In django feature for sending emails: send_mail()
+        #Note this is a Build-In django feature for sending emails in Django.
 
         #The function will recieve , Subject, Messsage and From 
             email = EmailMultiAlternatives(
