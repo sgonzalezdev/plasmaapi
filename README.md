@@ -18,4 +18,4 @@
  4. Run your server 
  **Command:** python manage.py runserver 
 
-### Please note the complete documentation is located on index page.  If you need help or assistance, please contact the user sgonzalezdev or email at sgonzalezdev@gmail.com 
+### Please note the complete documentation is located on index page.  If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 
