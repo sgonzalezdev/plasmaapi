@@ -4,7 +4,7 @@
 ## Why should I use this REST API? 
 1. **Fast:** This library or Django (App) is using all the power of Django 4.0 by allowing high performance and use of the framework properties. Note this has been tested 100% with Axious using JavaScript   
 2. **Easy to code:** Neat documentation that saves you time while integrating the source to your projects. It is as simple as adding the app (email_api) to seetings.py 
-3. **Short:**Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability 
+3. **Short:** Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability 
 
 **Easy Email Template:** This API integrates a default HTML template, so you are freely to include your own customized email template.   
 
