@@ -1,4 +1,4 @@
- # PlasmaAPI
+# PlasmaAPI
 
 ### PlasmaAPI is a simple fast and reliable web library API built with Python 3.10+ and using Django 4.0+ 
 
@@ -12,10 +12,9 @@
 
 ## Installation
 
- 1. Create and activate a Virtual Environment using commands: python3 -m venv env and source env/bin/activate 
+ 1. Create and activate a Virtual Environment by using commands: python3 -m venv env and source /bin/activate 
  2. Pip install -r requirements.txt 
  3. Pip install plasmaapi
- 4. Run your server 
- **Command:** python manage.py runserver 
+ 4. Run your server by using command: python manage.py runserver 
 
-### Please note the complete documentation is located on index page.  If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 
+### Please note the complete documentation is located on index page. If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 
