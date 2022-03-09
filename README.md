@@ -12,9 +12,9 @@
 
 ## Installation
 
- 1. Create and activate a virtual environment by using commands: python3 -m venv env and source /bin/activate 
+ 1. Create and activate a virtual environment using commands: python3 -m venv env and source /bin/activate 
  2. Pip install -r requirements.txt 
  3. Pip install plasmaapi
- 4. Run your server by using command: python manage.py runserver 
+ 4. Run your server using command: python manage.py runserver 
 
 ### Please note the complete documentation is located on index page. If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 

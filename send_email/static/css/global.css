@@ -13,7 +13,7 @@ body {
   padding: 0;
   height: 100%;
   margin: 0;
-  font-family:'Raleway-Black'!important;
+  font-family:'Raleway-Medium'!important;
 }
 
 /*This makes footer sticky to the bottom*/
@@ -198,7 +198,9 @@ font-size: 15px;
   background:  transparent;
   padding: 0px;
   border: 0px;
+  
 }
+ 
 
 .main-nav-left {
   padding: 50px;
