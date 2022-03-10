@@ -20,7 +20,7 @@ integrates a default HTML template, so you are freely to include your own custom
 
  1. Create and activate a virtual environment using commands: python3 -m venv env and source /bin/activate 
  2. Pip install -r requirements.txt 
- 3. Download or clone this git repo and put it inside your env 
+ 3. Download or clone the git repo and put it inside your env 
  4. Run your server using command: python manage.py runserver 
 
 ### Please note the complete documentation is located on index page. If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 
