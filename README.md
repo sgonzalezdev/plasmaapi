@@ -12,8 +12,8 @@
 
 **Release Version: 0.1.0**
 
--Send an email with a customized email template from contact form.  The URL=“/send_email”
-integrates a default HTML template, so you are freely to include your own customized email template  
+Send an email with a customized email template from contact form.  The URL=“/send_email”
+integrates a default HTML template, so you are freely to include your own design.  
   
 
 ## Installation
