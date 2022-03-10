@@ -8,13 +8,19 @@
 2. **Easy to code:** Neat documentation that saves you time while integrating the source to your projects. It is as simple as adding the app (email_api) to seetings.py 
 3. **Short:** Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability 
 
-**Easy Email Template:** This API integrates a default HTML template, so you are freely to include your own customized email template.   
+## Features 
+
+**Release Version: 0.1.0**
+
+-Send an email with a customized email template from contact form.  The URL=“/send_email”
+integrates a default HTML template, so you are freely to include your own customized email template  
+  
 
 ## Installation
 
  1. Create and activate a virtual environment using commands: python3 -m venv env and source /bin/activate 
  2. Pip install -r requirements.txt 
- 3. Pip install -t 'directory' plasmaapi
+ 3. Download or clone this git repo and put it inside your env 
  4. Run your server using command: python manage.py runserver 
 
 ### Please note the complete documentation is located on index page. If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 
