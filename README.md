@@ -14,13 +14,13 @@
 
 -Send an email with a customized email template from contact form.  The URL=“/send_email”
 integrates a default HTML template, so you are freely to include your own customized email template  
-
+  
 
 ## Installation
 
- 1. Create and activate a virtual environment by using commands: python3 -m venv env and source /bin/activate 
+ 1. Create and activate a virtual environment using commands: python3 -m venv env and source /bin/activate 
  2. Pip install -r requirements.txt 
- 3. Pip install plasmaapi
- 4. Run your server by using command: python manage.py runserver 
+ 3. Download or clone the git repo and put it inside your env 
+ 4. Run your server using command: python manage.py runserver 
 
 ### Please note the complete documentation is located on index page. If you need help or assistance, please contact the user sgonzalezdev or email him at sgonzalezdev@gmail.com 
