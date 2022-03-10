@@ -8,7 +8,13 @@
 2. **Easy to code:** Neat documentation that saves you time while integrating the source to your projects. It is as simple as adding the app (email_api) to seetings.py 
 3. **Short:** Avoiding complex functions, easy, fast and well-documented reducing bugs and allowing scalability 
 
-**Easy Email Template:** This API integrates a default HTML template, so you are freely to include your own customized email template.   
+##Features 
+
+**Release Version: 0.1.0**
+
+Send an email with a customized email template from contact form.  The URL=“/send_email”
+integrates a default HTML template, so you are freely to include your own customized email template.  
+
 
 ## Installation
 
